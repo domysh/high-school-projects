@@ -1,0 +1,1 @@
+/usr/bin/g++ -DEVAL -std=gnu++17 -O3 -march=native -pipe -static -s -o ristorante grader.cpp ristorante.cpp

@@ -1,0 +1,1 @@
+/usr/bin/g++ -DEVAL -std=gnu++17 -O3 -march=native -pipe -static -s -o permutazione2 grader.cpp permutazione2.cpp

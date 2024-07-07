@@ -1,0 +1,1 @@
+/usr/bin/g++ -DEVAL -std=gnu++17 -O3 -march=native -pipe -static -s -o compleanno grader.cpp compleanno.cpp

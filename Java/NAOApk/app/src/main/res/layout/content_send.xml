@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".SocketSendActivity"
+    tools:showIn="@layout/activity_send"
+    android:id="@+id/root_view">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/EnterText"
+        android:id="@+id/title"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sendMessageEdit"
+        android:layout_below="@+id/title"
+        android:layout_alignParentStart="true"
+        android:inputType="text"
+        android:hint="@string/MessageText"
+        android:focusable="true"
+        android:imeOptions="actionDone"
+        android:layout_toStartOf="@+id/SendButton" />
+
+
+    <Button
+        android:name="android:colorButtonNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/SendButton"
+        android:text="@string/Send"
+        android:onClick="onSend"
+        android:drawableStart="@drawable/ic_menu_send"
+        android:layout_below="@+id/title"
+        android:layout_alignParentEnd="true" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Response"
+        android:textStyle="bold"
+        android:id="@+id/ResponseHeader"
+        android:layout_below="@id/sendMessageEdit"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_recycler_view"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ResponseHeader"/>
+</RelativeLayout>
